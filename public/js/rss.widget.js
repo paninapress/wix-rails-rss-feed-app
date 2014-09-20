@@ -22,8 +22,8 @@ var _rssWidget = (function() {
         handleWindowResize();
 
         applyStyle();
-        setIngred(rssModel.settings.ingredients);
-        console.log(rssModel.settings.ingredients);
+        setIngred(rssModel.settings.listOfIngredients);
+        console.log(rssModel.settings.listOfIngredients);
     }
 
     /**

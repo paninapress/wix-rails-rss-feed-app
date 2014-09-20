@@ -125,7 +125,7 @@ function bindEvents () {
 
     sp.listOfIngredsInput.change( function(){
         console.log("THINGS CHANGED!");
-        updateSettingsProperty('ingredients', sp.listOfIngredients.val());
+        updateSettingsProperty('listOfIngredients', sp.listOfIngredients.val());
 
     });
 }
