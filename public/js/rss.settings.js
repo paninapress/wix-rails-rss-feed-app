@@ -4,7 +4,7 @@
 var sp ={
     connectButton :  $('#connectBtn'),
     feedInputUrlElm : $('#rssFeedUrl'),
-    numOfEntriesInput : $('#numOfEntries'),
+    listOfStepsInput : $('#listOfSteps'),
     listOfIngredsInput : $('#listOfIngredients'),
     disconnectAccountElm : $('#disconnectAccount'),
     sliders: {widgetBcgCB: {}, feedBcgCB: {}},
@@ -70,6 +70,7 @@ function initCheckboxes() {
 function initIngredients(){
     sp.listOfIngredsInput.val(rssModel.settings.listOfIngredients);
     sp.recipeNameInput.val(rssModel.settings.recipeName);
+    sp.listOfStepsInput.val(rssModel.settings.listOfSteps);
 }
 
 /**
@@ -134,6 +135,9 @@ function bindEvents () {
     sp.recipeNameInput.change( function(){
         updateSettingsProperty('recipeName', sp.recipeNameInput.val());
 
+    });
+    sp.listOfStepsInput.change(function(){
+        updateSettingsProperty('listOfSteps', sp.listOfStepsInput.val());
     });
 }
 

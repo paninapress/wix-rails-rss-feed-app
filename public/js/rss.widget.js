@@ -6,7 +6,7 @@ var _rssWidget = (function() {
     // Property for containing widget elements
     var sp = {
         widgetBody: $('.widget-body'),
-        feedElement: $('#feedEntries'),
+        steps: $('#recipeSteps'),
         title : $('#recipeTitle'),
         ingred: $('.test-ingred'),
         scroll : $('#scrollbar1'),
@@ -26,6 +26,7 @@ var _rssWidget = (function() {
         console.log(rssModel.settings.listOfIngredients);
 
         setRecipeTitle(rssModel.settings.recipeName);
+        setRecipeSteps(rssModel.settings.listOfSteps);
     }
 
     /**
@@ -71,10 +72,13 @@ var _rssWidget = (function() {
         sp.title.html(title);
     }
 
-    // Set test-ingred
     function setIngred(ingred){
-        $('.test-ingred').html(ingred);
+        sp.ingred.html(ingred);
         console.log("Hey the ingred is" + ingred);
+    }
+
+    function setRecipeSteps(steps){
+        sp.steps.html(steps);
     }
 
     /**
