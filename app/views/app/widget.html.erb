@@ -8,13 +8,20 @@
 <body>
 <div class="widget-body">
     <div class="widget-header">
-	<div class="test-ingred"></div>
         <div class="main-title" id="recipeTitle"></div>
+	<div class="test-ingred"></div>
     </div>
     <div class="overview">
+	<button onclick="myFunction()">Print this page</button>
         <div class="feed-container" id="recipeSteps"></div>
     </div>
 </div>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
 
 <script id="feed" type="text/x-handlebars-template">
     <a class="entry-link" href="{{link}}" target="_blank">
