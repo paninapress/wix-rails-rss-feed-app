@@ -17,6 +17,9 @@ function applySettings() {
 
     // Number of entries in the RSS feed
     rssModel.settings.numOfEntries = rssModel.settings.numOfEntries || 4;
+
+    // List of ingredients
+    rssModel.settings.listOfIngredients = rssModel.settings.listOfIngredients || "1 Cup Pumpkin";
 }
 
 

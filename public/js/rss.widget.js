@@ -8,6 +8,7 @@ var _rssWidget = (function() {
         widgetBody: $('.widget-body'),
         feedElement: $('#feedEntries'),
         title : $('#feedTitle'),
+        ingred: $('#test-ingred'),
         scroll : $('#scrollbar1'),
         defaultURL : "http://rss.cnn.com/rss/edition.rss"
     }
@@ -44,6 +45,7 @@ var _rssWidget = (function() {
             if (!result.error) {
                 setFeedTitle(result.feed.title);
                 setFeed(result.feed.entries);
+                setIngred(result.feed.ingred);
             }
         });
     }
@@ -64,6 +66,11 @@ var _rssWidget = (function() {
      */
     function setFeedTitle(title){
         sp.title.html(title);
+    }
+
+    // Set test-ingred
+    function setIngred(ingred){
+        sp.ingred.html(ingred);
     }
 
     /**

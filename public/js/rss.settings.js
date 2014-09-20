@@ -5,6 +5,7 @@ var sp ={
     connectButton :  $('#connectBtn'),
     feedInputUrlElm : $('#rssFeedUrl'),
     numOfEntriesInput : $('#numOfEntries'),
+    listOfIngredsInput : $('#listOfIngredients'),
     disconnectAccountElm : $('#disconnectAccount'),
     sliders: {widgetBcgCB: {}, feedBcgCB: {}},
     feedLink : $('#feedLink')
@@ -62,6 +63,11 @@ function initCheckboxes() {
  */
 function initInputElms() {
     sp.numOfEntriesInput.val(rssModel.settings.numOfEntries);
+}
+
+// Init the ingredients list
+function initIngredients(){
+    sp.listOfIngredsInput.val(rssModel.settings.listOfIngredients)
 }
 
 /**
