@@ -22,7 +22,7 @@ var _rssWidget = (function() {
         handleWindowResize();
 
         applyStyle();
-        setIngred(sp.listOfIngredsInput.val());
+        setIngred(rssModel.settings.ingredients);
     }
 
     /**

@@ -119,9 +119,14 @@ function bindEvents () {
         updateSettingsProperty(sp.numOfEntriesInput.attr("id"), sp.numOfEntriesInput.val());
     });
 
+    $(document).on('listOfIngredsInput.change', function(ev, data) {
+        // updateSettingsProperty(data.type, data.value);
+    });
+
     sp.listOfIngredsInput.change( function(){
         console.log("THINGS CHANGED!");
-        setIngred(sp.listOfIngredsInput.val());
+        updateSettingsProperty('ingredients', rssModel.settings.listOfIngredients);
+
     });
 }
 
