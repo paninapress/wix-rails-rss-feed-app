@@ -23,6 +23,7 @@ var _rssWidget = (function() {
 
         applyStyle();
         setIngred(rssModel.settings.ingredients);
+        console.log(rssModel.settings.ingredients);
     }
 
     /**
@@ -70,7 +71,8 @@ var _rssWidget = (function() {
 
     // Set test-ingred
     function setIngred(ingred){
-        sp.ingred.html(ingred);
+        sp.ingred.append(ingred);
+        console.log("Hey the ingred is" + ingred);
     }
 
     /**
