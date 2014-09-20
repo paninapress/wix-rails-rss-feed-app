@@ -8,7 +8,7 @@ var _rssWidget = (function() {
         widgetBody: $('.widget-body'),
         feedElement: $('#feedEntries'),
         title : $('#feedTitle'),
-        ingred: $('#test-ingred'),
+        ingred: $('.test-ingred'),
         scroll : $('#scrollbar1'),
         defaultURL : "http://rss.cnn.com/rss/edition.rss"
     }
@@ -71,7 +71,7 @@ var _rssWidget = (function() {
 
     // Set test-ingred
     function setIngred(ingred){
-        sp.ingred.append(ingred);
+        $('.test-ingred').html(ingred);
         console.log("Hey the ingred is" + ingred);
     }
 
