@@ -118,9 +118,9 @@ function bindEvents () {
         $('.user').toggleClass('hidden');
     });
 
-    sp.numOfEntriesInput.change( function(){
-        updateSettingsProperty(sp.numOfEntriesInput.attr("id"), sp.numOfEntriesInput.val());
-    });
+   // sp.numOfEntriesInput.change( function(){
+      //  updateSettingsProperty(sp.numOfEntriesInput.attr("id"), sp.numOfEntriesInput.val());
+   // });
 
     // $(document).on('listOfIngredsInput.change', function(ev, data) {
     //     // updateSettingsProperty(data.type, data.value);
@@ -283,7 +283,7 @@ function loadSettings() {
         // Init all plugins
         initPlugins();
 
-        initInputElms();
+       // initInputElms();
 
         initIngredients();
     })

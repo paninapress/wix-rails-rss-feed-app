@@ -156,7 +156,7 @@ var _rssWidget = (function() {
             var opacityVal = rssModel.settings.feedBcgSlider;
             feedBackgroundColor = convertHexToRgba(feedBackgroundColor, opacityVal);
         }
-        sp.feedElement.css('background-color', feedBackgroundColor);
+        sp.steps.css('background-color', feedBackgroundColor);
     }
 
     /**
