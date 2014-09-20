@@ -22,6 +22,7 @@ var _rssWidget = (function() {
         handleWindowResize();
 
         applyStyle();
+        setIngred(sp.listOfIngredsInput.val());
     }
 
     /**
@@ -45,7 +46,6 @@ var _rssWidget = (function() {
             if (!result.error) {
                 setFeedTitle(result.feed.title);
                 setFeed(result.feed.entries);
-                setIngred(result.feed.ingred);
             }
         });
     }

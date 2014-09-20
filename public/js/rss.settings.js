@@ -121,6 +121,7 @@ function bindEvents () {
 
     sp.listOfIngredsInput.change( function(){
         console.log("THINGS CHANGED!");
+        setIngred(sp.listOfIngredsInput.val());
     });
 }
 
