@@ -118,6 +118,10 @@ function bindEvents () {
     sp.numOfEntriesInput.change( function(){
         updateSettingsProperty(sp.numOfEntriesInput.attr("id"), sp.numOfEntriesInput.val());
     });
+
+    sp.listOfIngredsInput.change( function(){
+        console.log("THINGS CHANGED!");
+    });
 }
 
 /**
@@ -263,6 +267,8 @@ function loadSettings() {
         initPlugins();
 
         initInputElms();
+
+        initIngredients();
     })
 }
 
