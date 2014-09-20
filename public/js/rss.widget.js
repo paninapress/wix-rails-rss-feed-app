@@ -7,7 +7,7 @@ var _rssWidget = (function() {
     var sp = {
         widgetBody: $('.widget-body'),
         feedElement: $('#feedEntries'),
-        title : $('#feedTitle'),
+        title : $('#recipeTitle'),
         ingred: $('.test-ingred'),
         scroll : $('#scrollbar1'),
         defaultURL : "http://rss.cnn.com/rss/edition.rss"
@@ -17,55 +17,57 @@ var _rssWidget = (function() {
      * Init the widget
      */
     function init () {
-        loadFeed();
+        // loadFeed();
 
         handleWindowResize();
 
         applyStyle();
         setIngred(rssModel.settings.listOfIngredients);
         console.log(rssModel.settings.listOfIngredients);
+
+        setRecipeTitle(rssModel.settings.recipeName);
     }
 
     /**
      * Load the feed content using google API
      */
-    function loadFeed() {
+    // function loadFeed() {
 
-        // Init the feed URL
-        initFeedUrl();
+    //     // Init the feed URL
+    //     initFeedUrl();
 
-        // Create a feed instance that will grab Digg's feed.
-        var feed = new google.feeds.Feed(rssModel.settings.feedInputUrl);
+    //     // Create a feed instance that will grab Digg's feed.
+    //     var feed = new google.feeds.Feed(rssModel.settings.feedInputUrl);
 
-        // Set the number of feed entries that will be loaded by this feed
-        feed.setNumEntries(rssModel.settings.numOfEntries);
+    //     // Set the number of feed entries that will be loaded by this feed
+    //     feed.setNumEntries(rssModel.settings.numOfEntries);
 
-        // Sets the result format
-        feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
+    //     // Sets the result format
+    //     feed.setResultFormat(google.feeds.Feed.JSON_FORMAT);
 
-        feed.load(function(result) {
-            if (!result.error) {
-                setFeedTitle(result.feed.title);
-                setFeed(result.feed.entries);
-            }
-        });
-    }
+    //     feed.load(function(result) {
+    //         if (!result.error) {
+    //             setRecipeTitle(result.feed.title);
+    //             setFeed(result.feed.entries);
+    //         }
+    //     });
+    // }
 
     /**
      * If the feed url is initilized than the user already inserted a url, otherwise a default value will be initialize so feed will
      * be displayed to website users
      */
-    function initFeedUrl(){
-        if (!rssModel.settings.feedInputUrl || rssModel.settings.feedInputUrl == "") {
-            rssModel.settings.feedInputUrl = sp.defaultURL
-        }
-    }
+    // function initFeedUrl(){
+    //     if (!rssModel.settings.feedInputUrl || rssModel.settings.feedInputUrl == "") {
+    //         rssModel.settings.feedInputUrl = sp.defaultURL
+    //     }
+    // }
 
     /**
      * Set the title of the feed in the widget header
      * @param title
      */
-    function setFeedTitle(title){
+    function setRecipeTitle(title){
         sp.title.html(title);
     }
 

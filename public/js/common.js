@@ -20,9 +20,9 @@ function applySettings() {
 
     // List of ingredients
     rssModel.settings.listOfIngredients = rssModel.settings.listOfIngredients || "1 Cup Pumpkin";
+    rssModel.settings.listOfSteps = rssModel.settings.listOfSteps || "Yah totally I can haz cheezburgrr by following zis recipe.";
+    rssModel.settings.recipeName = rssModel.settings.recipeName || "Nutella Brownies";
 }
-
-
 
 
 

@@ -8,7 +8,8 @@ var sp ={
     listOfIngredsInput : $('#listOfIngredients'),
     disconnectAccountElm : $('#disconnectAccount'),
     sliders: {widgetBcgCB: {}, feedBcgCB: {}},
-    feedLink : $('#feedLink')
+    feedLink : $('#feedLink'),
+    recipeNameInput : $('#recipeName')
 }
 
 /**
@@ -61,13 +62,14 @@ function initCheckboxes() {
  * Init the input elements
  * Init the input  with a start value, a one that was saved in the DB or a default one
  */
-function initInputElms() {
-    sp.numOfEntriesInput.val(rssModel.settings.numOfEntries);
-}
+// function initInputElms() {
+//     sp.numOfEntriesInput.val(rssModel.settings.numOfEntries);
+// }
 
 // Init the ingredients list
 function initIngredients(){
-    sp.listOfIngredsInput.val(rssModel.settings.listOfIngredients)
+    sp.listOfIngredsInput.val(rssModel.settings.listOfIngredients);
+    sp.recipeNameInput.val(rssModel.settings.recipeName);
 }
 
 /**
@@ -126,6 +128,11 @@ function bindEvents () {
     sp.listOfIngredsInput.change( function(){
         console.log("THINGS CHANGED!");
         updateSettingsProperty('listOfIngredients', sp.listOfIngredsInput.val());
+
+    });
+
+    sp.recipeNameInput.change( function(){
+        updateSettingsProperty('recipeName', sp.recipeNameInput.val());
 
     });
 }
